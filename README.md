@@ -15,4 +15,10 @@ mmall_learning
 
 >7.先写接口的实现，在复制方法的声明到接口
 
->8.使用自定义类型存储到set集合时，要重写hashcode和euqals方法
+>8.使用自定义类型存储到set集合时，要重写hashcode和equals方法
+
+>9.PageHelper 会自动给Mapper中的SQL语句添加limit语句，因此不必在手写SQL语句时加上 结尾处的**分号**
+
+>10.Mybatis 中，在写SQL语句时，可以使用<where>标签，自动拼接where语句，不管where的条件是否存在
+
+>11.set集合contains复杂度O(1), list集合contains复杂度O(n)
