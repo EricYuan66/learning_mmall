@@ -22,3 +22,7 @@ mmall_learning
 >10.Mybatis 中，在写SQL语句时，可以使用<where>标签，自动拼接where语句，不管where的条件是否存在
 
 >11.set集合contains复杂度O(1), list集合contains复杂度O(n)
+
+>12.BigDecimal **一定**要用 String参数的构造器，否则也会有精度丢失问题
+
+>13.MySQL IFNULL函数
