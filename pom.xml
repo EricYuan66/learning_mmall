@@ -268,6 +268,7 @@
       </plugin>
 
       <!-- geelynote maven的核心插件之-complier插件默认只支持编译Java 1.4，因此需要加上支持高版本jre的配置，在pom.xml里面加上 增加编译插件 -->
+      <!-- 这个插件能把webinfo下的lib内的jar在打包时包含在内，自动发布到服务器-->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
