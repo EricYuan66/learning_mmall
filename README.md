@@ -26,3 +26,5 @@ mmall_learning
 >12.BigDecimal **一定**要用 String参数的构造器，否则也会有精度丢失问题
 
 >13.MySQL IFNULL函数
+
+>14.MySQL useGeneratedKeys="true" keyProperty="id" 可以返回自增的主键值
