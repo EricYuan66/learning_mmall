@@ -70,10 +70,19 @@ public class Const {
         public int getCode() {
             return code;
         }
+
+        public static OrderStatusEnum codeOf(int code) {
+            for (OrderStatusEnum myEnum : values()) {
+                if (myEnum.getCode() == code) {
+                    return myEnum;
+                }
+            }
+            throw new RuntimeException("没有找到对应的枚举");
+        }
     }
 
 
-    public interface AlipayCallback{
+    public interface AlipayCallback {
         String TRADE_STATUS_WAIT_BUYER_PAY = "WAIT_BUYER_PAY";
         String TRADE_STATUS_TRADE_SUCCESS = "TRADE_SUCCESS";
 
@@ -81,7 +90,7 @@ public class Const {
         String RESPONSE_FAILED = "failed";
     }
 
-    public enum PayPlatformEnum{
+    public enum PayPlatformEnum {
         ALIPAY(1, "支付宝"),
         WECHAT(2, "微信");
 
@@ -101,5 +110,35 @@ public class Const {
             return code;
         }
     }
+
+    public enum PaymentTypeEnum {
+        ONLINE_PAY(1, "在线支付");
+
+        private String value;
+        private int code;
+
+        PaymentTypeEnum(int code, String value) {
+            this.value = value;
+            this.code = code;
+        }
+
+        public String getValue() {
+            return value;
+        }
+
+        public int getCode() {
+            return code;
+        }
+
+        public static PaymentTypeEnum codeOf(int code) {
+            for (PaymentTypeEnum paymentType : values()) {
+                if (paymentType.getCode() == code) {
+                    return paymentType;
+                }
+            }
+            throw new RuntimeException("没有找到对应的枚举");
+        }
+    }
+
 
 }
